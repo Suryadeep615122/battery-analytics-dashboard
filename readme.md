@@ -1,120 +1,86 @@
-\#  Battery Analytics Dashboard
+# Battery Analytics Dashboard
 
-
-
-A full-stack Battery Analytics Dashboard built using \*\*FastAPI (Python)\*\* and \*\*React\*\*, designed to visualize battery usage, health, and performance across charge–discharge cycles.
-
-
+A full-stack Battery Analytics Dashboard built using FastAPI (Python) and React, designed to visualize battery usage, health, and performance across charge–discharge cycles.
 
 ---
 
+## Features
 
+### Backend (FastAPI)
 
-\##  Features
+- Fetches battery data from Battery Snapshots API
 
+- Secure IMEI-based access
 
+- REST APIs:
 
-\### Backend (FastAPI)
+- `/summary`
 
-\- Fetches battery data from Battery Snapshots API
+- `/cycles/{imei}`
 
-\- Secure IMEI-based access
+- `/cycles/{imei}/latest`
 
-\- REST APIs:
+- Swagger UI for API testing
 
-&nbsp; - `/summary`
+### Frontend (React)
 
-&nbsp; - `/cycles/{imei}`
+- Battery (IMEI) selection
 
-&nbsp; - `/cycles/{imei}/latest`
+- Cycle navigation
 
-\- Swagger UI for API testing
+- Cycle statistics
 
+- SOH degradation trend
 
+- Temperature distribution (5°C / 10°C / 15°C / 20°C toggle)
 
-\### Frontend (React)
+- Performance metrics (speed \& distance)
 
-\- Battery (IMEI) selection
+- Charging insights
 
-\- Cycle navigation
-
-\- Cycle statistics
-
-\- SOH degradation trend
-
-\- Temperature distribution (5°C / 10°C / 15°C / 20°C toggle)
-
-\- Performance metrics (speed \& distance)
-
-\- Charging insights
-
-\- Alerts \& safety monitoring
-
-
+- Alerts \& safety monitoring
 
 ---
 
+## Tech Stack
 
+-Backend: Python, FastAPI
 
-\##  Tech Stack
+-Frontend: React, Recharts
 
+-Visualization: Line charts, Bar charts
 
-
-\- \*\*Backend:\*\* Python, FastAPI
-
-\- \*\*Frontend:\*\* React, Recharts
-
-\- \*\*Visualization:\*\* Line charts, Bar charts
-
-\- \*\*API Docs:\*\* Swagger (OpenAPI)
-
-
+-API Docs: Swagger (OpenAPI)
 
 ---
 
+## How to Run the Project
 
-
-\##  How to Run the Project
-
-
-
-\### 1. Clone the Repository
-
-
+## 1. Clone the Repository
 
 ```bash
 
-git clone https://github.com/https://github.com/Suryadeep615122/battery-analytics-dashboard.git
+git clone https://github.com/Suryadeep615122/battery-analytics-dashboard.git
 
 
 
-\## backend setup fastAPI
+## backend setup fastAPI
 
-\##create virtual environment
+##create virtual environment
 
-
-
-```bash
-
-cd battery\_analysis
+cd battery_analysis
 
 python -m venv venv
 
 
 
-\## Activate virtual environment (for windows especially)
+## Activate virtual environment (for windows especially)
 
-
-```bash
-venv\\Scripts\\activate
-
-
-
-\## install dependencies
+venv\Scripts\activate
 
 
 
-```bash
+## install dependencies
 
 pip install -r requirements.txt
 
@@ -122,55 +88,48 @@ pip install -r requirements.txt
 
 
 
-\## to run analysis file
-
-```bash
-
-python app\\analysis.py
+## to run analysis file
 
 
 
+python app\analysis.py
 
 
-\## to run backend server
 
-```bash
+
+
+## to run backend server
+
 uvicorn app.main:app --reload
 
 
 
 
 
-\## backend server runs at 
+## backend server runs at
 
-```bash
 http://127.0.0.1:8000
 
 
+## Swagger ui
 
-
-
-\## Swagger ui
-
-```bash
 http://127.0.0.1:8000/docs
 
 
 
 
 
-\###################################################################################################
+###################################################################################################
 
 
 
-\## Frontend setup 
+## Frontend setup
 
-\# open a new terminal (terminal 2) and run below mention commands one by one
+# open a new terminal (terminal 2) and run below mention commands one by one
 
 
 
-```bash
-cd battery\_dashboard
+cd battery_dashboard
 
 npm install
 
@@ -179,64 +138,58 @@ npm start
 
 ## install recharts
 
-```bash
-
 npm install recharts
 
 
 
 
 
-\## frontend runs at 
+## frontend runs at
 
-```bash
+
 http://localhost:3000
 
 
 
 
 
-\##Usage
+##Usage
 
 
 
-&nbsp;	##Select Battery IMEI
+	##Select Battery IMEI
 
 
 
-&nbsp;	##Select Cycle number
+	##Select Cycle number
 
 
 
-\##View:
+##View:
 
 
 
-&nbsp;	##Cycle statistics
+	##Cycle statistics
 
 
 
-&nbsp;	##SOH trend
+	##SOH trend
 
 
 
-&nbsp;	##Temperature distribution
+	##Temperature distribution
 
 
 
-&nbsp;	##Performance metrics
+	##Performance metrics
 
 
 
-&nbsp;	##Charging insights
+	##Charging insights
 
 
 
-&nbsp;	##Alerts \& safety status
-
-
-
-
+	##Alerts \& safety status
 
 
 
@@ -248,3 +201,8 @@ http://localhost:3000
 
 
 
+
+
+
+
+```
